@@ -137,3 +137,14 @@ main {
    justify-content: center;
    
 }
+
+.icon{
+    height: 30px;
+    width: 30px;
+    transition: transform 0.3 ease-in-out;
+
+}
+
+.icon{
+    transform: (1.2);
+}
