@@ -1,4 +1,4 @@
-/* Configurações Gerais da Página */
+
 body {
     background-color: #ffffff;
     background-image: url('imagens/Persona3.gif');
@@ -12,19 +12,21 @@ body {
     flex-wrap: wrap;
 }
 
-/* Imagem de Perfil */
+
 .logo {
     border-radius: 50%;
     border: 3px solid;
     border-color: #0c2a26 #277d64;
+    margin-top: 40px;
+    box-shadow: 5px 10px 4px rgba(67, 119, 104, 0.3);
 }
 
-/* Menu Lateral (Header) - Ultra Transparente */
+
 #menu {
-    /* Opacidade reduzida para 30% (0.3) */
+
     background-color: rgba(32, 47, 77, 0.3);
     
-    /* Desfoque aumentado para dar mais contraste ao texto */
+    
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     
@@ -37,12 +39,7 @@ body {
     z-index: 10;
 }
 
-.logo {
-    margin-top: 40px;
-    box-shadow: 5px 10px 4px rgba(67, 119, 104, 0.3);
-}
 
-/* Títulos do Menu */
 h1, h2 {
     font-size: 1.5rem;
     font-family: "Copperplate Gothic Light", sans-serif;
@@ -55,7 +52,7 @@ h2 {
     font-size: 1.3rem;
 }
 
-/* Container dos Links */
+
 nav {
     display: flex;
     flex-direction: column;
@@ -64,7 +61,7 @@ nav {
     padding: 0 20px;
 }
 
-/* Links do Menu */
+
 .link {
     text-decoration: none;
     font-size: 1.2rem;
@@ -76,14 +73,14 @@ nav {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Efeito Hover nos Links */
+
 .link:hover {
     background-color: rgb(0, 0, 255);
     color: white;
     font-size: 1.3rem;
 }
 
-/* Área de Conteúdo Principal */
+
 main {
     flex: 1;
     min-width: 300px;
@@ -94,12 +91,12 @@ main {
     align-content: flex-start;
 }
 
-/* Cards de Informação - Ultra Transparentes */
+
 #info01, #info02, #info03, #info04, #info05, #info06, #info07 {
-    /* Opacidade reduzida para 15% (0.15) */
+    
     background-color: rgba(255, 255, 255, 0.15); 
     
-    /* Desfoque aumentado para criar um visual de vidro fino e sofisticado */
+    
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(16px);
     
@@ -112,18 +109,17 @@ main {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
 }
 
-/* Card de Informações Pessoais */
+
 #info01 {
     width: 100%;
     font-size: 0.9rem;
 }
 
-/* Rodapé da Página */
-#rp{
+
+#rp {
     width: 100%;
     text-align: center;
     padding: 20px;
-    background-color: #202f4d;
     color: white;
     margin-top: auto;
     background-color: rgba(255, 255, 255, 0.041); 
@@ -132,19 +128,21 @@ main {
     clear: both;
 }
 
-#redes{
+#redes {
     display: flex;
-   justify-content: center;
-   
+    justify-content: center;
+    gap: 15px; 
 }
 
-.icon{
+
+.icon {
+    display: inline-block;
     height: 30px;
     width: 30px;
-    transition: transform 0.3 ease-in-out;
-
+    transition: transform 0.3s ease-in-out; 
 }
 
-.icon{
-    transform: (1.2);
+
+a:hover .icon {
+    transform: scale(1.5); 
 }
