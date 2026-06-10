@@ -38,29 +38,43 @@
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-        <script>
-            const ctx = document.getElementById('myChart');
+       <script>
+    const ctx = document.getElementById('myChart');
 
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Design de Moda', 'Web Frontend', 'Produção Audiovisual', 'Design Gráfico', 'Administrativo'],
-                    datasets: [{
-                        label: 'Habilidades',
-                        data: [8, 4, 6, 5, 7], 
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 10 //
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Design de Moda', 'Web Frontend', 'Produção Audiovisual', 'Design Gráfico', 'Administrativo'],
+            datasets: [{
+                label: 'Habilidades',
+                data: [4.38, 3.22, 4.57, 3.88, 4.9],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 10,
+                    ticks: {
+                        callback: function(value) {
+                            return (value * 10) + '%';
                         }
                     }
                 }
-            });
-        </script>
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return ' ' + (context.raw * 10) + '%';
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
     </main>
 
 </body>
